@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>jQuery Validation Plugin w/Multiple Forms</h1>
+
+    <form id="form1">
+      <label for="age">Age: <input name="age"/></label>
+      <button type="submit">Validate!</button>
+    </form>
+
+    <form id="form2">
+      <label for="age">Age: <input name="age"/></label>
+      <button type="submit">Validate!</button>
+    </form>
+
+    <form id="form3">
+      <label for="age">Age: <input name="age"/></label>
+      <button type="submit">Validate!</button>
+    </form>
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script>
+      var rules = {
+        age: {
+          required: true,
+          min: 13
+        }
+      };
+
+      $("#form1").validate({rules: rules});
+      $("#form2").validate({rules: rules});
+      $("#form3").validate({rules: rules});
+    </script>
+</html>
